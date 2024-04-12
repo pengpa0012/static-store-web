@@ -1,16 +1,33 @@
+import { useEffect, useRef } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 
 function App() {
+  const productRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleScroll = (e: any) => {
+      const { scrollTop, scrollHeight, clientHeight } = e.target.scrollingElement
+      const position = Math.ceil(
+          (scrollTop / (scrollHeight - clientHeight)) * 100
+      )
+      // adjust the value here
+      productRef.current!.style.transform = `scale(${position / 2.5})`
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <>
+    <div>
       <Navbar />
       <div className="min-h-screen bg-red-200 grid place-items-center">
         <h1 className="text-7xl font-bold">This is a heading</h1>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <div className="w-[50px] h-[50px] bg-red-300"></div>
+        <div ref={productRef} className="w-[50px] h-[50px] bg-red-300 transition-500"></div>
       </div>
       <div className="min-h-screen grid place-items-center">
         <div className="flex gap-4 px-4">
@@ -45,7 +62,7 @@ function App() {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
