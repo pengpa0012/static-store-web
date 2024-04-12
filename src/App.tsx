@@ -11,8 +11,10 @@ function App() {
       const position = Math.ceil(
           (scrollTop / (scrollHeight - clientHeight)) * 100
       )
-      // adjust the value here
-      productRef.current!.style.transform = `scale(${position / 2.5})`
+      if(position < 30) {
+        // adjust the value here
+        productRef.current!.style.transform = `scale(${position})`
+      }
     }
     window.addEventListener('scroll', handleScroll)
     return () => {
@@ -27,14 +29,21 @@ function App() {
         <h1 className="text-7xl font-bold">This is a heading</h1>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <div ref={productRef} className="w-[50px] h-[50px] bg-red-300 transition-500"></div>
+        <div ref={productRef} className="w-[50px] h-[50px] bg-red-300 transition-all duration-75"></div>
       </div>
-      <div className="min-h-screen grid place-items-center">
-        <div className="flex gap-4 px-4">
-          <p className="text-3xl flex-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ut cupiditate ratione voluptatem, quisquam libero recusandae consectetur earum neque dolores!</p>
-          <div className="flex-1">
-            <div className="w-[300px] h-[300px] mx-auto bg-red-300"></div>
-          </div>
+      <div className="min-h-screen"></div>
+      <div className="px-4">
+        <div className="min-h-screen sticky top-[150px]">
+          <div className="w-[500px] h-[300px] ml-24 bg-red-300"></div>
+        </div>
+        <div className='min-h-screen flex justify-end'>
+          <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
+        </div>
+        <div className='min-h-screen flex justify-end'>
+          <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
+        </div>
+        <div className='min-h-screen flex justify-end'>
+          <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
