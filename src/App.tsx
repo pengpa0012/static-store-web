@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { six } from "./assets/index"
 import './App.css'
 
 function App() {
-  const productRef = useRef<HTMLDivElement>(null)
+  const productRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
     const handleScroll = (e: any) => {
@@ -10,9 +11,11 @@ function App() {
       const position = Math.ceil(
           (scrollTop / (scrollHeight - clientHeight)) * 100
       )
-      if(position < 30) {
+      console.log(position)
+      if(position < 15) {
         // adjust the value here
-        productRef.current!.style.transform = `scale(${position})`
+        console.log("yeyes")
+        productRef.current!.style.transform = `translateY(${-(position * 30)}px) scale(${position * 0.3})`
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -27,7 +30,13 @@ function App() {
         <h1 className="text-7xl font-bold">This is a heading</h1>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <div ref={productRef} className="w-[50px] h-[50px] bg-red-300 transition-all duration-75"></div>
+        <h2 className="text-7xl font-bold">Something text here...</h2>
+      </div>
+      <div className="min-h-screen grid place-items-center">
+        <img ref={productRef} className="w-[300px] transition-all duration-100" src={six}/>
+      </div>
+      <div className="min-h-screen grid place-items-center">
+        <h2 className="text-7xl font-bold">Something text here...</h2>
       </div>
       <div className="min-h-screen"></div>
       <div className="px-4">
