@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { six } from "./assets/index"
+import { test2 } from "./assets/index"
 import './App.css'
 
 function App() {
@@ -11,11 +11,10 @@ function App() {
       const position = Math.ceil(
           (scrollTop / (scrollHeight - clientHeight)) * 100
       )
-      console.log(position)
-      if(position < 15) {
+      if(position < 30) {
         // adjust the value here
         console.log("yeyes")
-        productRef.current!.style.transform = `translateY(${-(position * 30)}px) scale(${position * 0.3})`
+        productRef.current!.style.transform = `translateY(${-(position * 30)}px) scale(${position * 0.4})`
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -25,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='overflow-x-clip'>
       <div className="min-h-screen bg-red-200 grid place-items-center">
         <h1 className="text-7xl font-bold">This is a heading</h1>
       </div>
@@ -33,7 +32,7 @@ function App() {
         <h2 className="text-7xl font-bold">Something text here...</h2>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <img ref={productRef} className="w-[300px] transition-all duration-100" src={six}/>
+        <img ref={productRef} className="w-[300px] transition-all duration-100" src={test2}/>
       </div>
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold">Something text here...</h2>
