@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
 
 function App() {
   const productRef = useRef<HTMLDivElement>(null)
