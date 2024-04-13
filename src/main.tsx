@@ -8,19 +8,26 @@ import {
 } from "react-router-dom"
 import About from './pages/About.tsx'
 import Cart from './pages/Cart.tsx'
+import Products from './pages/Products.tsx'
+import Navbar from './components/Navbar.tsx'
+import Footer from './components/Footer.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <><Navbar /><App /><Footer /></>,
   },
   {
     path: "/about",
-    element: <About />,
+    element: <><Navbar /><About /><Footer /></>,
+  },
+  {
+    path: "/products",
+    element: <><Navbar /><Products /><Footer /></>,
   },
   {
     path: "/cart",
-    element: <Cart />,
+    element: <><Navbar /><Cart /><Footer /></>,
   },
 ]);
 
