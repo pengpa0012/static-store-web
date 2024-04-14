@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { close1, close2, close3, close4, close5, close6, close7, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, img6, phone15, side, test2 } from "./assets/index"
+import { close1, close6, close7, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1, phone10, phone15, phone17, phone18, phone2, phone3, test2 } from "./assets/index"
 import './App.css'
 
 function App() {
@@ -42,15 +42,13 @@ function App() {
         <div className="min-h-screen sticky top-[150px]">
           <img src={phone15} className="w-full max-w-[600px] ml-24" />
         </div>
-        <div className='min-h-screen flex justify-end'>
-          <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
-        </div>
-        <div className='min-h-screen flex justify-end'>
-          <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
-        </div>
-        <div className='min-h-screen flex justify-end'>
-          <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
-        </div>
+        {
+          [1,2,3].map(el => (
+            <div className='min-h-screen flex justify-end' key={el}>
+              <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
+            </div>
+          ))
+        }
       </div>
       <div className="min-h-screen grid place-items-center">
         <div className="min-h-screen">
@@ -63,8 +61,15 @@ function App() {
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold">Something text here...</h2>
       </div>
-      <div className="min-h-screen grid place-items-center">
-        <div className="w-[250px] h-[350px] bg-red-300 mb-4"></div>
+      <div className='min-h-screen flex flex-col items-center justify-center'>
+        <img src={phone18} className="max-w-[800px] h-[400px] bg-red-300 z-10" />
+        <div className="flex gap-5 -translate-y-full">
+          {
+            [1,2,3,4,5].map(el => (
+              <div className="w-[600px] h-[400px] bg-red-300 sticky top-[80vh]" key={el}></div>
+            ))
+          }
+        </div>
       </div>
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold">Something text here...</h2>
@@ -124,53 +129,40 @@ function App() {
               </div>
             </div>
           </div>
-          <img src={img6} className='flex-1 h-[450px] object-cover'/>
+          <img src={phone17} className='flex-1 h-[450px] object-cover'/>
+        </div>
+      </div>
+      <div className='min-h-screen max-w-[1440px] mx-auto px-4'>
+        <h4 className="text-5xl font-bold mb-4">Heading.<br /> Lorem ipsum dolor sit.</h4>
+        <div className="flex flex-col justify-center">
+          <img src={close1} className='w-full max-h-[600px] aspect-square object-cover'/>
+          <div className="flex">
+            <img src={close6} className='w-1/2 max-h-[500px] flex-1/2 aspect-square object-cover'/>
+            <img src={close7} className='w-1/2 max-h-[500px] flex-1/2 aspect-square object-cover'/>
+          </div>
+          <div className="flex">
+            <img src={phone1} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+            <img src={phone2} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+            <img src={phone3} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+          </div>
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <div>
-          <h4 className="text-5xl font-bold mb-4">Heading.<br /> Lorem ipsum dolor sit.</h4>
-          <div className="flex flex-col justify-center gap-5">
-            <img src={close1} className='w-full h-[600px] object-cover'/>
-            <div className="flex gap-5">
-              <img src={close6} className='flex-1/2 h-[400px] object-cover'/>
-              <img src={close7} className='flex-1/2 h-[400px] object-cover'/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="min-h-screen grid place-items-center">
-        <div className="flex gap-5">
-          <div>
-            <div className="w-[250px] h-[350px] bg-red-300 mb-4"></div>
-            <h4>Product name</h4>
-            <p>test</p>
-            <p>test</p>
-            <div className="flex gap-5">
-              <button>Buy</button>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-          <div>
-            <div className="w-[250px] h-[350px] bg-red-300 mb-4"></div>
-            <h4>Product name</h4>
-            <p>test</p>
-            <p>test</p>
-            <div className="flex gap-5">
-              <button>Buy</button>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-          <div>
-            <div className="w-[250px] h-[350px] bg-red-300 mb-4"></div>
-            <h4>Product name</h4>
-            <p>test</p>
-            <p>test</p>
-            <div className="flex gap-5">
-              <button>Buy</button>
-              <button>Add to Cart</button>
-            </div>
-          </div>  
+        <div className="flex gap-8">
+          {
+            [1,2,3].map(el => (
+              <div className='text-center' key={el}>
+                <img src={phone10} className="w-[250px] mb-4" />
+                <h4 className='font-bold text-2xl'>Product name</h4>
+                <p>Awesome</p>
+                <p>₱56,990</p>
+                <div className="flex justify-center gap-4 mt-4">
+                  <button className='bg-blue-600 text-xs text-white rounded-full py-2 px-4'>Buy Now</button>
+                  <button className='text-gray-600 text-xs'>Add to Cart</button>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>

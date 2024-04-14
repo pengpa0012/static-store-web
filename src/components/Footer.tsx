@@ -7,13 +7,22 @@ function Footer() {
           <li>List</li>
           <li>List</li>
           <li>List</li>
+          <li>List</li>
+        </ul>
+        <ul>
+          <li>List</li>
+          <li>List</li>
+          <li>List</li>
+          <li>List</li>
         </ul>
         <ul>
           <li>List</li>
           <li>List</li>
           <li>List</li>
+          <li>List</li>
         </ul>
         <ul>
+          <li>List</li>
           <li>List</li>
           <li>List</li>
         </ul>
