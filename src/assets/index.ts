@@ -20,6 +20,24 @@ import close6 from "./close6.jpg"
 import close7 from "./close7.jpg"
 import close8 from "./close8.jpg"
 import close9 from "./close9.jpg"
+import phone1 from "./phone-1.jpg"
+import phone2 from "./phone-2.jpg"
+import phone3 from "./phone-3.jpg"
+import phone4 from "./phone-4.jpg"
+import phone5 from "./phone-5.jpg"
+import phone6 from "./phone-6.jpg"
+import phone7 from "./phone-7.jpg"
+import phone8 from "./phone-8.jpg"
+import phone9 from "./phone-9.jpg"
+import phone10 from "./phone-10.jpg"
+import phone11 from "./phone-11.jpg"
+import phone12 from "./phone-12.jpg"
+import phone13 from "./phone-13.jpg"
+import phone14 from "./phone-14.jpg"
+import phone15 from "./phone-15.jpg"
+import phone16 from "./phone-16.jpg"
+import phone17 from "./phone-17.jpg"
+import phone18 from "./phone-18.jpg"
 import side from "./side.jpg"
 
 export {
@@ -45,5 +63,23 @@ export {
   close7,
   close8,
   close9,
+  phone1,
+  phone2,
+  phone3,
+  phone4,
+  phone5,
+  phone6,
+  phone7,
+  phone8,
+  phone9,
+  phone10,
+  phone11,
+  phone12,
+  phone13,
+  phone14,
+  phone15,
+  phone16,
+  phone17,
+  phone18,
   side
 }
