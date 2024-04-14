@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { test2 } from "./assets/index"
+import { close1, close2, close3, close4, close5, close6, close7, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, img6, side, test2 } from "./assets/index"
 import './App.css'
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
       <div className="min-h-screen"></div>
       <div className="px-4">
         <div className="min-h-screen sticky top-[150px]">
-          <div className="w-[500px] h-[300px] ml-24 bg-red-300"></div>
+          <img src={side} className="w-full max-w-[600px] ml-24" />
         </div>
         <div className='min-h-screen flex justify-end'>
           <p className="text-5xl font-bold leading-snug w-1/2">Lorem ipsum dolor sit</p>
@@ -58,35 +58,71 @@ function App() {
         <div className="ml-auto w-[500px] h-[50px] bg-red-300"></div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <div className="flex gap-10">
-          <div className='flex flex-col gap-5'>
+        <div className="flex items-center gap-10">
+          <div className='flex flex-1 flex-col gap-5'>
             <div className="flex gap-5">
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon1} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon2} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon3} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
             </div>
             <div className="flex gap-5">
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon4} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon5} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon6} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
             </div>
             <div className="flex gap-5">
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
-              <div className="w-[100px] h-[100px] bg-red-300"></div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon7} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon8} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
+              <div className="flex gap-2 border border-black rounded-md p-2">
+                <img src={icon9} className='w-[50px] h-[50px]' />
+                <p className="text-xs
+                ">Some text</p>
+              </div>
             </div>
           </div>
-          <div className="w-[350px] h-[450px] bg-red-300"></div>
+          <img src={img6} className='flex-1 w-full h-[450px] object-cover'/>
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
         <div>
           <h4 className="text-5xl font-bold mb-4">Heading.<br /> Lorem ipsum dolor sit.</h4>
             <div className="flex flex-col justify-stretch gap-5">
-              <div className="w-full h-[500px] bg-red-300"></div>
+              <img src={close1} className='w-full h-[600px] object-cover'/>
               <div className="flex gap-5">
-                <div className="w-[600px] h-[400px] bg-red-300"></div>
-                <div className="w-[600px] h-[400px] bg-red-300"></div>
+              <img src={close6} className='w-full h-[400px] object-cover'/>
+              <img src={close7} className='w-full h-[400px] object-cover'/>
               </div>
             </div>
         </div>
