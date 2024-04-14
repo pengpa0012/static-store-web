@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { close1, close6, close7, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1, phone10, phone15, phone17, phone18, phone2, phone3, test2 } from "./assets/index"
+import { close1, close6, close7, flat, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1, phone10, phone15, phone17, phone18, phone2, phone3, test2 } from "./assets/index"
 import './App.css'
 
 function App() {
@@ -26,16 +26,16 @@ function App() {
   return (
     <div className='overflow-x-clip'>
       <div className="min-h-screen bg-red-200 grid place-items-center">
-        <h1 className="text-7xl font-bold">This is a heading</h1>
+        <h1 className="text-7xl font-bold text-center">This is a heading</h1>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
       <div className="min-h-screen grid place-items-center">
         <img ref={productRef} className="w-[300px] transition-all duration-100" src={test2}/>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
       <div className="min-h-screen"></div>
       <div className="px-4">
@@ -52,14 +52,14 @@ function App() {
       </div>
       <div className="min-h-screen grid place-items-center">
         <div className="min-h-screen">
-          <div className="w-[500px] h-[50px] bg-red-300 sticky top-[80vh]"></div>
+          <img src={flat} className="w-full sticky top-[40vh]" />
           <div className="min-h-screen"></div>
-          <p className="text-5xl font-bold leading-snug py-30">Lorem ipsum dolor sit</p>
+          <p className="text-5xl text-center font-bold leading-snug py-30">Lorem ipsum dolor sit</p>
           <div className="min-h-screen"></div>
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
       <div className='min-h-screen flex flex-col items-center justify-center'>
         <img src={phone18} className="max-w-[800px] h-[400px] bg-red-300 z-10" />
@@ -72,7 +72,7 @@ function App() {
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
       <div className="min-h-screen grid place-items-center">
         <div className="flex items-center gap-10">

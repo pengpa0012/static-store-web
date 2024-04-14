@@ -39,6 +39,7 @@ import phone16 from "./phone-16.jpg"
 import phone17 from "./phone-17.jpg"
 import phone18 from "./phone-18.jpg"
 import side from "./side.jpg"
+import flat from "./flat.png"
 
 export {
   six,
@@ -81,5 +82,6 @@ export {
   phone16,
   phone17,
   phone18,
-  side
+  side,
+  flat
 }
