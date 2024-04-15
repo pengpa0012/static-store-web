@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { close1, close6, close7, flat, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1, phone10, phone15, phone17, phone18, phone2, phone3, slide1, slide2, slide3, slide4, slide5, test2 } from "./assets/index"
 import './App.css'
+import React from 'react'
 
 function App() {
   const productRef = useRef<HTMLImageElement>(null)
@@ -59,17 +60,19 @@ function App() {
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center">Capture the moments...</h2>
       </div>
       <div className='min-h-screen flex flex-col items-center justify-center'>
-        <img src={phone18} className="max-w-[800px] h-[400px] z-10" />
-        <div className="flex gap-5 -translate-y-full">
+        <img src={phone18} className="w-full max-w-[1000px] backdrop-hue-rotate-180 z-10 pointer-events-none px-4" />
+        <div className="slider py-12 flex gap-5 -translate-y-[90%] overflow-x-scroll">
           {
-            [slide1,slide2,slide3,slide4,slide5].map(el => (
-              <img src={el} className="w-[600px] h-[400px]  sticky top-[80vh]" key={el} />
+            [slide1,slide2,slide3,slide4,slide5,slide1,slide2,slide3,slide4,slide5].map((el, i) => (
+              <React.Fragment key={i}>
+                <img src={el} className="w-full max-w-[1000px] h-[477px] hue-rotate-180" />
+              </React.Fragment>
             ))
           }
-        </div>
+        </div>    
       </div>
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>

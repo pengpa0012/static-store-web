@@ -15,3 +15,22 @@ body {
   box-sizing: border-box;
 }
 
+/* Webkit browsers (Chrome, Safari) */
+.slider::-webkit-scrollbar {
+  width: 15px; /* Scrollbar width */
+  height: 10px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: #e6e6e6; /* Light gray background */
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: #151515; /* Black scroll thumb */
+  width: 100px;
+  border-radius: 15px; /* Optional: rounded corners */
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+  background: #333; /* Darker black when hovered */
+}
