@@ -38,6 +38,11 @@ import phone15 from "./phone-15.png"
 import phone16 from "./phone-16.png"
 import phone17 from "./phone-17.png"
 import phone18 from "./phone-18.png"
+import slide1 from "./slide-1.jpg"
+import slide2 from "./slide-2.jpg"
+import slide3 from "./slide-3.jpg"
+import slide4 from "./slide-4.jpg"
+import slide5 from "./slide-5.jpg"
 import side from "./side.png"
 import flat from "./flat.png"
 
@@ -82,6 +87,11 @@ export {
   phone16,
   phone17,
   phone18,
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
   side,
   flat
 }

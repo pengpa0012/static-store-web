@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { close1, close6, close7, flat, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1, phone10, phone15, phone17, phone18, phone2, phone3, test2 } from "./assets/index"
+import { close1, close6, close7, flat, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1, phone10, phone15, phone17, phone18, phone2, phone3, slide1, slide2, slide3, slide4, slide5, test2 } from "./assets/index"
 import './App.css'
 
 function App() {
@@ -62,11 +62,11 @@ function App() {
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
       <div className='min-h-screen flex flex-col items-center justify-center'>
-        <img src={phone18} className="max-w-[800px] h-[400px] bg-red-300 z-10" />
+        <img src={phone18} className="max-w-[800px] h-[400px] z-10" />
         <div className="flex gap-5 -translate-y-full">
           {
-            [1,2,3,4,5].map(el => (
-              <div className="w-[600px] h-[400px] bg-red-300 sticky top-[80vh]" key={el}></div>
+            [slide1,slide2,slide3,slide4,slide5].map(el => (
+              <img src={el} className="w-[600px] h-[400px]  sticky top-[80vh]" key={el} />
             ))
           }
         </div>
