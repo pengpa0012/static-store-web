@@ -1,3 +1,5 @@
+import { phone16 } from "../assets"
+import Product from "../components/Product"
 
 function Products() {
   return (
@@ -9,7 +11,7 @@ function Products() {
         <div className="flex flex-wrap justify-center gap-5 px-5 py-24">
           {
             [1,2,3,4,5,6,7,8,9,0].map(el => (
-              <div className="w-[300px] h-[400px] bg-red-200" key={el}></div>
+              <Product src={phone16} key={el} />
             ))
           }
         </div>

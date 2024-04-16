@@ -1,4 +1,4 @@
-import { icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon9 } from "../assets";
+import { icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9 } from "../assets";
 
 export const featContent = [
   [ 
@@ -12,7 +12,7 @@ export const featContent = [
     {icon: icon6, text:"ROM"}
   ],
   [ {icon: icon7, text:"Video"},
-    {icon: icon7, text:"Resolution"},
+    {icon: icon8, text:"Resolution"},
     {icon: icon9, text:"Fingerprint"},
   ]
 ]

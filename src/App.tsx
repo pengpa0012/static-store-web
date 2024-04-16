@@ -3,6 +3,7 @@ import { close1, close6, close7, flat, phone1, phone15, phone16, phone17, phone1
 import './App.css'
 import React from 'react'
 import { featContent } from './util/content'
+import Product from './components/Product'
 
 function App() {
   const productRef = useRef<HTMLImageElement>(null)
@@ -42,7 +43,9 @@ function App() {
       <div className="min-h-screen"></div>
       <div className="px-4">
         <div className="min-h-screen sticky top-[150px]">
-          <img src={phone15} className="w-full max-w-[600px] ml-24" />
+          <div className="relative max-w-[800px]">
+            <img src={phone15} className="w-full" />
+          </div>
         </div>
         {
           ["Good for filming","Photography","and Gaming..."].map(el => (
@@ -85,8 +88,8 @@ function App() {
           <div className='flex flex-1 flex-col gap-5'>
             <div className="flex gap-5">
               {
-                featContent[0].map(el => (
-                  <div className="flex flex-1 gap-2 items-center rounded-md p-2">
+                featContent[0].map((el, i) => (
+                  <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
                     <p className="text-xs
                     ">{el.text}</p>
@@ -96,8 +99,8 @@ function App() {
             </div>
             <div className="flex gap-5">
               {
-                featContent[1].map(el => (
-                  <div className="flex flex-1 gap-2 items-center rounded-md p-2">
+                featContent[1].map((el, i) => (
+                  <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
                     <p className="text-xs
                     ">{el.text}</p>
@@ -107,8 +110,8 @@ function App() {
             </div>
             <div className="flex gap-5">
               {
-                featContent[2].map(el => (
-                  <div className="flex flex-1 gap-2 items-center rounded-md p-2">
+                featContent[2].map((el, i) => (
+                  <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
                     <p className="text-xs
                     ">{el.text}</p>
@@ -135,20 +138,12 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen grid place-items-center">
+      <div className="min-h-screen grid place-items-center py-48">
+        <h2 className="text-7xl font-bold text-center pb-20">Something text here...</h2>
         <div className="flex gap-8">
           {
-            [phone16,phone16,phone16].map((el, i) => (
-              <div className='text-center' key={i}>
-                <img src={el} className="w-[250px] object-cover mb-4" />
-                <h4 className='font-bold text-2xl'>Product name</h4>
-                <p>Awesome</p>
-                <p>₱56,990</p>
-                <div className="flex justify-center gap-4 mt-4">
-                  <button className='bg-blue-600 text-xs text-white rounded-full py-2 px-4'>Buy Now</button>
-                  <button className='text-gray-600 text-xs'>Add to Cart</button>
-                </div>
-              </div>
+            [1,2,3].map(el => (
+              <Product src={phone16} key={el} />
             ))
           }
         </div>
