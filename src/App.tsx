@@ -28,8 +28,17 @@ function App() {
 
   return (
     <div className='overflow-x-clip'>
-      <div className="min-h-screen bg-red-200 grid place-items-center">
-        <h1 className="text-7xl font-bold text-center">This is a heading</h1>
+      <div className="min-h-screen relative">
+        <div className="pt-[200px] text-center">
+          <h1 className="text-7xl font-bold text-center mb-2">This is a heading</h1>
+          <p className="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, temporibus!</p>
+          <div className="flex justify-center gap-4 mt-4">
+            <button className='bg-blue-600 text-md text-white rounded-full py-2 px-6'>Learn more</button>
+            <button className='text-gray-600 text-md'>Learn more</button>
+          </div>
+        </div>
+        <img src={phone15} className="max-w-[800px] absolute bottom-0 left-0 scale-x-[-1]" />
+        <img src={phone15} className="max-w-[800px] absolute bottom-0 right-0" />
       </div>
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>
