@@ -56,11 +56,23 @@ function App() {
         }
       </div>
       <div className="min-h-screen grid place-items-center">
-        <div className="min-h-screen">
-          <img src={flat} className="w-full sticky top-[40vh]" />
+        <div className=" min-h-screen">
+          <div className="sticky top-[90vh]">
+            <div className="flat-image">
+              <img src={flat} className="w-full" />
+            </div>
+          </div>
           <div className="min-h-screen"></div>
-          <p className="text-5xl text-center font-bold leading-snug py-30">Lorem ipsum dolor sit</p>
-          <div className="min-h-screen"></div>
+          <div className="relative z-[-2]">
+            <p className="text-6xl text-center font-bold leading-snug py-24">Make memories...</p>
+            {
+              [slide1,slide2,slide3,slide4,slide5].map((el, i) => (
+                <React.Fragment key={i}>
+                  <img src={el} className="w-full max-w-[1000px] h-[477px] aspect-square" />
+                </React.Fragment>
+              ))
+            }
+          </div>
         </div>
       </div>
       <div className="min-h-screen grid place-items-center">
@@ -86,13 +98,18 @@ function App() {
       <div className="min-h-screen grid place-items-center">
         <div className="flex items-center gap-10">
           <div className='flex flex-1 flex-col gap-5'>
+            <h3 className="text-4xl font-bold mb-4">Phone Model Here</h3>
             <div className="flex gap-5">
               {
                 featContent[0].map((el, i) => (
                   <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
-                    <p className="text-xs
-                    ">{el.text}</p>
+                    <div className="flex flex-col text-nowrap">
+                      <p className="text-xs
+                      ">{el.text}</p>
+                      <p className="text-xs
+                      ">{el.description}</p>
+                    </div>
                   </div>
                 ))
               }
@@ -102,8 +119,12 @@ function App() {
                 featContent[1].map((el, i) => (
                   <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
-                    <p className="text-xs
-                    ">{el.text}</p>
+                    <div className="flex flex-col text-nowrap">
+                      <p className="text-xs
+                      ">{el.text}</p>
+                      <p className="text-xs
+                      ">{el.description}</p>
+                    </div>
                   </div>
                 ))
               }
@@ -113,12 +134,17 @@ function App() {
                 featContent[2].map((el, i) => (
                   <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
-                    <p className="text-xs
-                    ">{el.text}</p>
+                    <div className="flex flex-col text-nowrap">
+                      <p className="text-xs
+                      ">{el.text}</p>
+                      <p className="text-xs
+                      ">{el.description}</p>
+                    </div>
                   </div>
                 ))
               }
             </div>
+            <h4 className="text-3xl font-bold mt-12">SRP: ₱56,990</h4>
           </div>
           <img src={phone17} className='flex-1 h-[450px] object-cover'/>
         </div>
