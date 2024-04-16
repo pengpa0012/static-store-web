@@ -34,3 +34,24 @@ body {
 .slider::-webkit-scrollbar-thumb:hover {
   background: #333; /* Darker black when hovered */
 }
+
+.slider {
+  animation: sliderAnim 50000ms linear alternate infinite;
+}
+
+.image-slider {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: invert(100%);
+  border-radius: 100px;
+}
+
+@keyframes sliderAnim {
+  from {
+    transform: translate(0, -92%);
+  }
+  
+  to {
+    transform: translate(-100%, -92%);
+  }
+}
