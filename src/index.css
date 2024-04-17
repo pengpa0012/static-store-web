@@ -79,30 +79,6 @@ body {
   height: 100%;
 }
 
-.simulate-img-cover .simulate-dots {
-  content: "";
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 11;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.simulate-img-cover .simulate-dots .dot {
-  width: 10px;
-  height: 10px;
-  background: #eee;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.simulate-img-cover .simulate-dots .dot.active {
-  background: #9c9c9c;
-}
-
 @keyframes sliderAnim {
   from {
     transform: translate(0, -92%);
