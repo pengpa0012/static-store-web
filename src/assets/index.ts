@@ -47,6 +47,7 @@ import side from "./side.png"
 import flat from "./flat.png"
 import subway from "./subway.jpg"
 import cameraScreen from "./camera-screen.jpg"
+import youtube from "./youtube.png"
 
 export {
   six,
@@ -97,5 +98,6 @@ export {
   side,
   flat,
   subway,
-  cameraScreen
+  cameraScreen,
+  youtube
 }

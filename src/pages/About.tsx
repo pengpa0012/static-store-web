@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { cameraScreen, phone14, subway } from "../assets"
+import { cameraScreen, phone14, subway, youtube } from "../assets"
 
 function About() {
   const slides = useRef<HTMLDivElement>(null)
@@ -40,7 +40,9 @@ function About() {
             <div ref={slides} className="simulate-slides">
               <img className="slide slide-1 object-cover" src={cameraScreen} />
               <img className="slide slide-1 object-cover" src={subway} />
-              <div className="slide slide-3 bg-blue-500"></div>
+              <div className="slide slide-3 bg-[#0f0f0f] grid place-items-center">
+                <img src={youtube} className="w-[150px]"/>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +60,7 @@ function About() {
         <div className="min-h-screen"></div>
         <div className="min-h-screen">
           <div className="sticky top-[10vh] mix-blend-overlay">
-            <h1 className="text-[10vw] font-extrabold text-center">TEST</h1>
+            <h1 className="text-[10vw] font-extrabold text-center">ENTERTAINMENT</h1>
           </div>
         </div>
         <div className="min-h-screen"></div>
