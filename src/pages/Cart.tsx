@@ -54,4 +54,7 @@ function Cart() {
   )
 }
 
+// add logic here
+// get data on local storage
+
 export default Cart

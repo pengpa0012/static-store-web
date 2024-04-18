@@ -46,6 +46,7 @@ import slide5 from "./slide-5.jpg"
 import side from "./side.png"
 import flat from "./flat.png"
 import subway from "./subway.jpg"
+import cameraScreen from "./camera-screen.jpg"
 
 export {
   six,
@@ -95,5 +96,6 @@ export {
   slide5,
   side,
   flat,
-  subway
+  subway,
+  cameraScreen
 }

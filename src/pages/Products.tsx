@@ -4,7 +4,7 @@ import Product from "../components/Product"
 function Products() {
   return (
     <>
-      <div className="min-h-screen bg-red-200 grid place-items-center">
+      <div className="min-h-screen grid place-items-center">
         <h1 className="text-7xl font-bold">This is a Products</h1>
       </div>
       <div className="min-h-screen">
