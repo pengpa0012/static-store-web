@@ -37,8 +37,8 @@ function App() {
             <button className='text-gray-600 text-md'>Learn more</button>
           </div>
         </div>
-        <img src={phone15} className="max-w-[800px] absolute bottom-0 left-0 scale-x-[-1] z-[-1]" />
-        <img src={phone15} className="max-w-[800px] absolute bottom-0 right-0 z-[-1]" />
+        {/* <img src={phone15} className="max-w-[800px] absolute bottom-0 left-0 scale-x-[-1] z-[-1]" />
+        <img src={phone15} className="max-w-[800px] absolute bottom-0 right-0 z-[-1]" /> */}
       </div>
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>

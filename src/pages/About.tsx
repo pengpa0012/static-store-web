@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { phone14 } from "../assets"
+import { phone14, subway } from "../assets"
 
 function About() {
   const slides = useRef<HTMLDivElement>(null)
@@ -38,8 +38,8 @@ function About() {
           <div className="simulate-img-cover relative overflow-x-hidden">
             <img src={phone14} className="simulate-img w-full max-w-[400px]" />
             <div ref={slides} className="simulate-slides">
-              <div className="slide slide-1 bg-red-500"></div>
               <div className="slide slide-2 bg-green-500"></div>
+              <img className="slide slide-1 object-cover" src={subway} />
               <div className="slide slide-3 bg-blue-500"></div>
             </div>
           </div>
@@ -47,20 +47,13 @@ function About() {
         <div className="min-h-screen"></div>
         <div className="min-h-screen"></div>
         <div className="min-h-screen"></div>
+        <div className="min-h-screen"></div>
       </div>
-      <div className="min-h-screen">
-        <div className="min-h-screen grid place-items-center">
-          <div className="flex gap-5 px-4">
-            <p className="text-4xl flex-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium accusantium nemo sapiente possimus consequuntur blanditiis culpa ipsam voluptatem consectetur et eveniet dolorem dolorum, a nulla? Nostrum impedit natus ducimus.</p>
-            <div className="w-[250px] h-[350px] bg-red-300 flex-1"></div>
-          </div>
-        </div>
-        <div className="min-h-screen grid place-items-center">
-          <div className="flex gap-5 px-4">
-            <div className="w-[250px] h-[350px] bg-red-300 flex-1"></div>
-            <p className="text-4xl flex-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium accusantium nemo sapiente possimus consequuntur blanditiis culpa ipsam voluptatem consectetur et eveniet dolorem dolorum, a nulla? Nostrum impedit natus ducimus.</p>
-          </div>
-        </div>
+      <div className="min-h-screen grid place-items-center">
+        <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
+      </div>
+      <div className="min-h-screen grid place-items-center">
+        <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
       </div>
     </>
   )
