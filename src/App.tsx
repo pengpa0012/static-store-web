@@ -158,7 +158,7 @@ function App() {
           <img src={phone17} className='flex-1 h-[450px] object-cover'/>
         </div>
       </div>
-      <div className='min-h-screen max-w-[1440px] mx-auto px-4'>
+      <div className='min-h-screen max-w-[1440px] mx-auto px-4 py-56'>
         <h4 className="text-5xl font-bold mb-4">Heading.<br /> Lorem ipsum dolor sit.</h4>
         <div className="flex flex-col justify-center gap-1">
           <img src={close1} className='w-full max-h-[600px] aspect-square object-cover'/>
@@ -171,16 +171,6 @@ function App() {
             <img src={phone2} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
             <img src={phone3} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
           </div>
-        </div>
-      </div>
-      <div className="min-h-screen grid place-items-center py-48">
-        <h2 className="text-7xl font-bold text-center pb-20">Something text here...</h2>
-        <div className="flex gap-8">
-          {
-            [1,2,3].map(el => (
-              <Product src={phone16} key={el} />
-            ))
-          }
         </div>
       </div>
     </div>

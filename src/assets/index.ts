@@ -48,6 +48,14 @@ import flat from "./flat.png"
 import subway from "./subway.jpg"
 import cameraScreen from "./camera-screen.jpg"
 import youtube from "./youtube.png"
+import phone1Front from "./phone-1-front.jpg"
+import phone1Back from "./phone-1-back.jpg"
+import phone2Front from "./phone-2-front.jpg"
+import phone2Back from "./phone-2-back.jpg"
+import phone3Front from "./phone-3-front.jpg"
+import phone3Back from "./phone-3-back.jpg"
+import phone4Front from "./phone-4-front.jpg"
+import phone4Back from "./phone-4-back.jpg"
 
 export {
   six,
@@ -99,5 +107,13 @@ export {
   flat,
   subway,
   cameraScreen,
-  youtube
+  youtube,
+  phone1Front,
+  phone1Back, 
+  phone2Front, 
+  phone2Back, 
+  phone3Front, 
+  phone3Back, 
+  phone4Front, 
+  phone4Back
 }

@@ -1,5 +1,6 @@
-import { phone16 } from "../assets"
+import { phone16, phone1Front, phone2Front, phone3Front, phone4Front } from "../assets"
 import Product from "../components/Product"
+import { productContent } from "../util/content"
 
 function Products() {
   return (
@@ -11,8 +12,8 @@ function Products() {
         <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
         <div className="flex flex-wrap justify-center gap-5 px-5 pt-24 pb-48">
           {
-            [1,2,3,4].map(el => (
-              <Product src={phone16} key={el} />
+            productContent.map((el, i) => (
+              <Product src={el.front} srcHover={el.back} key={i} />
             ))
           }
         </div>
