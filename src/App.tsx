@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
-import { close1, close6, close7, flat, phone1, phone15, phone16, phone17, phone18, phone2, phone3, slide1, slide2, slide3, slide4, slide5, test2 } from "./assets/index"
+import { close1, close6, close7, flat, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, slide1, slide2, slide3, slide4, slide5, test2 } from "./assets/index"
 import './App.css'
 import React from 'react'
 import { featContent } from './util/content'
-import Product from './components/Product'
 
 function App() {
   const productRef = useRef<HTMLImageElement>(null)
+  const heroImgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
     const handleScroll = (e: any) => {
@@ -15,10 +15,9 @@ function App() {
           (scrollTop / (scrollHeight - clientHeight)) * 100
       )
       if(position < 30) {
-        // adjust the value here
-        console.log("yeyes")
         productRef.current!.style.transform = `translateY(${-(position * 30)}px) scale(${position * 0.4})`
       }
+      heroImgRef.current!.style.transform = `translateY(${-(position - 50)}%)`
     }
     window.addEventListener('scroll', handleScroll)
     return () => {
@@ -37,10 +36,14 @@ function App() {
             <button className='text-gray-600 text-md'>Learn more</button>
           </div>
         </div>
-        {/* <img src={phone15} className="max-w-[800px] absolute bottom-0 left-0 scale-x-[-1] z-[-1]" />
-        <img src={phone15} className="max-w-[800px] absolute bottom-0 right-0 z-[-1]" /> */}
+        <div ref={heroImgRef} className='duration-500 flex justify-around absolute bottom-0 left-0 right-0 translate-y-[50%] z-[-1]'>
+          <img src={phone4Front} className="max-w-[400px]" />
+          <img src={phone4Back} className="max-w-[400px]" />
+          <img src={phone3Front} className="max-w-[400px]" />
+          <img src={phone3Back} className="max-w-[400px]" />
+        </div>
       </div>
-      <div className="min-h-screen grid place-items-center">
+      <div className="min-h-screen grid place-items-center bg-white">
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
       <div className="min-h-screen grid place-items-center">

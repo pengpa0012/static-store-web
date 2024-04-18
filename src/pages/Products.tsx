@@ -1,4 +1,3 @@
-import { phone16, phone1Front, phone2Front, phone3Front, phone4Front } from "../assets"
 import Product from "../components/Product"
 import { productContent } from "../util/content"
 
