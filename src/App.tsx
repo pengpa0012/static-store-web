@@ -60,7 +60,7 @@ function App() {
           </div>
         </div>
         {
-          ["Good for filming","Photography","and Gaming..."].map(el => (
+          ["Sleek and stylish","Vibrant display","and long lasting power..."].map(el => (
             <div className='min-h-screen flex justify-end' key={el}>
               <p className="text-7xl font-bold leading-snug w-1/2">{el}</p>
             </div>

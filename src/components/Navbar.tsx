@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 
 function Navbar() {
-
   function scrollTop() {
     window.scrollTo({top: 0})
   }
@@ -18,8 +17,12 @@ function Navbar() {
           <li onClick={scrollTop}>
             <Link to="/products">Products</Link>
           </li>
-          <li onClick={scrollTop}>
+          <li onClick={scrollTop} className="relative">
             <Link to="/cart">Cart</Link>
+            {
+              JSON.parse(localStorage.getItem("cart") || "[]").length > 0 && 
+              <div className="cart-counter">{JSON.parse(localStorage.getItem("cart") || "[]").length}</div>
+            }
           </li>
         </ul>
       </div>

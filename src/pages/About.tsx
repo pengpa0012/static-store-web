@@ -34,7 +34,7 @@ function About() {
       </div>
       <div className="min-h-screen py-12 px-4">
         <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
-        <div className="sticky top-[10vh] grid place-items-center">
+        <div className="sticky top-[8vh] grid place-items-center">
           <div className="simulate-img-cover relative overflow-x-hidden">
             <img src={phone14} className="simulate-img w-full max-w-[400px]" />
             <div ref={slides} className="simulate-slides">

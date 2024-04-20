@@ -19,19 +19,35 @@ export const featContent = [
 
 export const productContent = [
   {
+    id: 0,
     front: phone1Front,
-    back: phone1Back
+    back: phone1Back,
+    name: "Product 1",
+    description: "Description 1",
+    price: 1000
   },
   {
+    id: 1,
     front: phone2Front,
-    back: phone2Back
+    back: phone2Back,
+    name: "Product 2",
+    description: "Description 2",
+    price: 1001
   },
   {
+    id: 2,
     front: phone3Front,
-    back: phone3Back
+    back: phone3Back,
+    name: "Product 3",
+    description: "Description 3",
+    price: 1002
   },
   {
+    id: 3,
     front: phone4Front,
-    back: phone4Back
+    back: phone4Back,
+    name: "Product 4",
+    description: "Description 4",
+    price: 1000
   }
 ]
