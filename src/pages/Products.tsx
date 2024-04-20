@@ -11,6 +11,7 @@ function Products() {
       const newCart = [...cart]
       newCart[findIndex].quantity! += 1
       localStorage.setItem("cart", JSON.stringify(newCart))
+      alert("Update Cart!")
       return
     }
     const newCart = cart.length > 0 ? [...cart, {...data, quantity: 1}] : [{...data, quantity: 1}]

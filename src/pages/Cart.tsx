@@ -1,5 +1,17 @@
+import { useState } from "react"
+import { ProductData } from "../util/types"
 
 function Cart() {
+  const [cartList, setCartList] = useState<ProductData[]>(JSON.parse(localStorage.getItem("cart") || "[]"))
+
+  function onRemoveCart(id: number) {
+    const findItem = cartList.find(el => el.id == id)
+    const newCart = [...cartList]
+    setCartList(newCart.filter(el => el.id !== findItem!.id))
+    localStorage.setItem("cart", JSON.stringify(newCart.filter(el => el.id !== findItem!.id)))
+    alert("Removed to Cart!")
+  }
+
   return (
    <div className="min-h-screen pt-24 max-w-[1440px] mx-auto px-4">
     <h2 className="text-5xl font-bold text-center mb-12">Cart</h2>
@@ -10,24 +22,24 @@ function Cart() {
           <th className="pb-4">Price</th>
           <th className="pb-4">Quantity</th>
           <th className="pb-4">Total</th>
+          <th className="pb-4">Action</th>
         </tr>
       </thead>
       <tbody className="divide-y">
         {
-          [1,2,3,4,5].map(el => (
-            <tr key={el}>
+          cartList.map(el => (
+            <tr key={el.id}>
               <td className="flex gap-2 py-4">
                 <div className="bg-gray-200 w-[100px] h-[100px]"></div>
                 <div className="flex flex-col gap-2">
-                  <p>Lorem</p>
-                  <h3 className="text-2xl">Lorem ipsum dolor sit amet.</h3>
-                  <p>Lorem</p>
+                  <p>{el.name}</p>
+                  <h3 className="text-2xl">{el.description}</h3>
                 </div>
               </td>
-              <td className="text-lg">$10.00 USD</td>
+              <td className="text-lg">${el.price}</td>
               <td>
                 <div className="flex gap-2">
-                  <p>3</p>
+                  <p>{el.quantity}</p>
                   <div className="flex">
                     <button className="border w-[25px] h-[25px] grid place-items-center rounded-tl-md rounded-bl-md">-</button>
                     <button className="border w-[25px] h-[25px] grid place-items-center rounded-tr-md rounded-br-md">+</button>
@@ -35,6 +47,7 @@ function Cart() {
                 </div>
               </td>
               <td className="text-lg">$10.00 USD</td>
+              <td className="text-lg"><button className="text-red-500" onClick={() => onRemoveCart(el.id)}>Delete</button></td>
             </tr>
           ))
         }
