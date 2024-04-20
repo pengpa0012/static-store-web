@@ -56,7 +56,7 @@ function Cart() {
                   </div>
                 </div>
               </td>
-              <td className="text-lg">$10.00 USD</td>
+              <td className="text-lg">${el.price * el.quantity!}.00 USD</td>
               <td className="text-lg"><button className="text-red-500" onClick={() => onRemoveCart(el.id)}>Delete</button></td>
             </tr>
           ))
@@ -69,7 +69,7 @@ function Cart() {
         <textarea placeholder="Type here..." className="border p-2 min-h-[50px] max-h-[200px] focus:outline-none"></textarea>
       </div>
       <div className="flex-1 flex flex-col items-end">
-        <p className="text-xl mb-4">Total: $$$$</p>
+        <p className="text-xl mb-4">Total: ${cartList.reduce((acc, curr) => acc += (curr.price * curr.quantity!), 0)}.00 USD</p>
         <button className="py-2 px-4 bg-blue-500 rounded-md text-white">Checkout</button>
       </div>
     </div>
