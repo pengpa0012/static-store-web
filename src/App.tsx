@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { close1, close6, close7, flat, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, slide1, slide2, slide3, slide4, slide5, test2 } from "./assets/index"
+import { close1, close6, close7, flat, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, slide1, slide2, slide3, slide4, slide5, test2, vid1, vid2, vid3, vid4, vid5 } from "./assets/index"
 import './App.css'
 import React from 'react'
 import { featContent } from './util/content'
@@ -78,10 +78,10 @@ function App() {
           <div className="relative z-[-2]">
             <p className="text-6xl text-center font-bold leading-snug py-24">Make memories...</p>
             {
-              [slide1,slide2,slide3,slide4,slide5].map((el, i) => (
-                <React.Fragment key={i}>
-                  <img src={el} className="w-full max-w-[1000px] h-[477px] aspect-square" />
-                </React.Fragment>
+              [vid1,vid2,vid3,vid4,vid5].map((el, i) => (
+                <div className="w-full max-w-[1000px] h-[419px] aspect-square" key={i}>
+                  <video autoPlay muted loop className='w-full h-full' src={el}></video>
+                </div>
               ))
             }
           </div>
