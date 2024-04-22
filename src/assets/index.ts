@@ -61,6 +61,8 @@ import phone3Front from "./phone-3-front.jpg"
 import phone3Back from "./phone-3-back.jpg"
 import phone4Front from "./phone-4-front.jpg"
 import phone4Back from "./phone-4-back.jpg"
+import imgSlider from "./img-slider.jpg"
+import imgSliderGray from "./img-slider-gray.jpg"
 
 export {
   six,
@@ -125,5 +127,7 @@ export {
   phone3Front, 
   phone3Back, 
   phone4Front, 
-  phone4Back
+  phone4Back,
+  imgSlider,
+  imgSliderGray
 }

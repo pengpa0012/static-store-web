@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { close1, close6, close7, flat, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, slide1, slide2, slide3, slide4, slide5, test2, vid1, vid2, vid3, vid4, vid5 } from "./assets/index"
+import { close1, close6, close7, flat, imgSlider, imgSliderGray, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, slide1, slide2, slide3, slide4, slide5, test2, vid1, vid2, vid3, vid4, vid5 } from "./assets/index"
 import './App.css'
 import React from 'react'
-import { featContent } from './util/content'
+import { featContent, phoneFeatures } from './util/content'
 
 function App() {
   const productRef = useRef<HTMLImageElement>(null)
@@ -60,9 +60,24 @@ function App() {
           </div>
         </div>
         {
-          ["Sleek and stylish","Vibrant display","and long lasting power..."].map(el => (
-            <div className='min-h-screen flex justify-end' key={el}>
-              <p className="text-7xl font-bold leading-snug w-1/2">{el}</p>
+          phoneFeatures.map((el, i) => (
+            <div className='min-h-screen flex justify-end' key={i}>
+              <div className='w-1/2 px-4'>
+                <h3 className="text-7xl mb-4 font-bold leading-snug">{el.title}</h3>
+                <p className="text-xl">{el.description}</p>
+                {
+                  i == 1 &&
+                  <div className='mx-auto my-12'>
+                    <p className="text-sm mb-2">Comparison</p>
+                    <div className="image-compare">
+                      <div> 
+                        <img src={imgSlider}/> 
+                      </div> 
+                      <img src={imgSliderGray}/> 
+                    </div>
+                  </div>
+                }
+              </div>
             </div>
           ))
         }

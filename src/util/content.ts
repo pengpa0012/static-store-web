@@ -51,3 +51,18 @@ export const productContent = [
     price: 1000
   }
 ]
+
+export const phoneFeatures = [
+  {
+    title: "Sleek and stylish",
+    description: "Designed to seamlessly merge elegance with innovation, it redefines modern aesthetics while delivering unparalleled performance. Elevate your mobile experience with a device that not only looks stunning but also effortlessly enhances your daily interactions."
+  },
+  {
+    title: "Vibrant display",
+    description: "Immerse yourself in a visual feast as vibrant hues come to life on a high-definition screen, elevating your viewing experience to new heights. Whether you're streaming your favorite content or browsing photos, get ready to be dazzled by the brilliance of every detail."
+  },
+  {
+    title: "and long lasting power...",
+    description: "With its long-lasting battery life, you can stay productive and entertained without worrying about running out of power. Experience peace of mind knowing that your device can keep up with your busy schedule, providing reliable performance whenever you need it most."
+  }
+] 
