@@ -2,18 +2,18 @@ import { icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1Ba
 
 export const featContent = [
   [ 
-    {icon: icon1, text:"Battery", description: "Description"},
-    {icon: icon2, text:"Camera", description: "40mp"},
-    {icon: icon3, text:"Charger", description: "Type-C"}
+    {icon: icon1, text:"Battery", description: "5000mAh Lithium-ion \nbattery"},
+    {icon: icon2, text:"Camera", description: "108MP/16MP/8MP"},
+    {icon: icon3, text:"Charger", description: "65W SuperCharge adapter"}
   ],
   [
-    {icon: icon4, text:"CPU", description: "Dragon"},
-    {icon: icon5, text:"RAM", description: "12GB"},
-    {icon: icon6, text:"ROM", description: "128GB"}
+    {icon: icon4, text:"CPU", description: "Octa-core Snapdragon"},
+    {icon: icon5, text:"RAM", description: "8GB"},
+    {icon: icon6, text:"ROM", description: "256GB"}
   ],
-  [ {icon: icon7, text:"Video", description: "4K resolution"},
-    {icon: icon8, text:"Size", description: "10x10"},
-    {icon: icon9, text:"Fingerprint", description: "Enabled"},
+  [ {icon: icon7, text:"Video", description: "4K video \nrecording at 60fps"},
+    {icon: icon8, text:"Size", description: "6.7-inch \nSuper AMOLED display"},
+    {icon: icon9, text:"Fingerprint", description: "In-display \nfingerprint sensor"},
   ]
 ]
 

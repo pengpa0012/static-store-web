@@ -49,8 +49,16 @@ function App() {
       <div className="min-h-screen grid place-items-center">
         <img ref={productRef} className="w-[300px] transition-all duration-100" src={test2}/>
       </div>
-      <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
+      <div className='min-h-[300vh] relative flex justify-stretch'>
+        <div className="min-h-screen flex-1 grid place-items-center sticky top-0">
+          <h2 className="text-7xl font-bold text-center">CPU HERE</h2>
+        </div>
+        <div className="min-h-screen flex-1 grid place-items-center sticky top-0">
+          <h2 className="text-7xl font-bold text-center">RAM HERE</h2>
+        </div>
+        <div className="min-h-screen flex-1 grid place-items-center sticky top-0">
+          <h2 className="text-7xl font-bold text-center">RESISTANCE HERE</h2>
+        </div>
       </div>
       <div className="min-h-screen"></div>
       <div className="px-4">
@@ -66,9 +74,20 @@ function App() {
                 <h3 className="text-7xl mb-4 font-bold leading-snug">{el.title}</h3>
                 <p className="text-xl">{el.description}</p>
                 {
+                  i == 0 &&
+                  <div className='mx-auto my-12'>
+                    <p className="text-sm mb-2">Available colors:</p>
+                    <div className="flex gap-4">
+                      <div className="w-[40px] h-[40px] bg-red-500 rounded-full"></div>
+                      <div className="w-[40px] h-[40px] bg-gray-500 rounded-full"></div>
+                      <div className="w-[40px] h-[40px] bg-blue-500 rounded-full"></div>
+                    </div>
+                  </div>
+                }
+                {
                   i == 1 &&
                   <div className='mx-auto my-12'>
-                    <p className="text-sm mb-2">Comparison</p>
+                    <p className="text-sm mb-2">Slider</p>
                     <div className="image-compare">
                       <div> 
                         <img src={imgSlider}/> 
@@ -132,10 +151,8 @@ function App() {
                   <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
                     <div className="flex flex-col text-nowrap">
-                      <p className="text-xs
-                      ">{el.text}</p>
-                      <p className="text-xs
-                      ">{el.description}</p>
+                      <p className="text-xs">{el.text}</p>
+                      <p className="text-xs whitespace-pre">{el.description}</p>
                     </div>
                   </div>
                 ))
@@ -147,10 +164,8 @@ function App() {
                   <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
                     <div className="flex flex-col text-nowrap">
-                      <p className="text-xs
-                      ">{el.text}</p>
-                      <p className="text-xs
-                      ">{el.description}</p>
+                      <p className="text-xs">{el.text}</p>
+                      <p className="text-xs whitespace-pre">{el.description}</p>
                     </div>
                   </div>
                 ))
@@ -162,10 +177,8 @@ function App() {
                   <div className="flex flex-1 gap-2 items-center rounded-md p-2" key={i}>
                     <img src={el.icon} className='w-[50px] h-[50px]' />
                     <div className="flex flex-col text-nowrap">
-                      <p className="text-xs
-                      ">{el.text}</p>
-                      <p className="text-xs
-                      ">{el.description}</p>
+                      <p className="text-xs">{el.text}</p>
+                      <p className="text-xs whitespace-pre">{el.description}</p>
                     </div>
                   </div>
                 ))
