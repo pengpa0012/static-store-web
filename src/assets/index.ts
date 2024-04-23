@@ -63,6 +63,9 @@ import phone4Front from "./phone-4-front.jpg"
 import phone4Back from "./phone-4-back.jpg"
 import imgSlider from "./img-slider.jpg"
 import imgSliderGray from "./img-slider-gray.jpg"
+import cpu2 from "./cpu-2.jpg"
+import memory from "./memory.jpg"
+import resistance from "./resistance.jpg"
 
 export {
   six,
@@ -129,5 +132,8 @@ export {
   phone4Front, 
   phone4Back,
   imgSlider,
-  imgSliderGray
+  imgSliderGray,
+  cpu2,
+  memory,
+  resistance
 }

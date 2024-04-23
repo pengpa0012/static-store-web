@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { close1, close6, close7, flat, imgSlider, imgSliderGray, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, slide1, slide2, slide3, slide4, slide5, test2, vid1, vid2, vid3, vid4, vid5 } from "./assets/index"
+import { close1, close6, close7, cpu2, flat, imgSlider, imgSliderGray, memory, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, resistance, slide1, slide2, slide3, slide4, slide5, test2, vid1, vid2, vid3, vid4, vid5 } from "./assets/index"
 import './App.css'
 import React from 'react'
 import { featContent, phoneFeatures } from './util/content'
@@ -49,16 +49,41 @@ function App() {
       <div className="min-h-screen grid place-items-center">
         <img ref={productRef} className="w-[300px] transition-all duration-100" src={test2}/>
       </div>
-      <div className='min-h-[300vh] relative flex justify-stretch'>
-        <div className="min-h-screen flex-1 grid place-items-center sticky top-0">
-          <h2 className="text-7xl font-bold text-center">CPU HERE</h2>
+      <div className='min-h-[300vh] relative'>
+        <div className="min-h-screen flex justify-start items-center sticky top-0">
+          <div className='w-[33.33%] relative'>
+            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
+              <div className='px-4'>
+                <h2 className="text-4xl">CPU</h2>
+                <p className='text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
+              </div>
+            </div>
+            <img src={cpu2} className='w-full h-[500px] object-cover aspect-square' />
+          </div>
         </div>
-        <div className="min-h-screen flex-1 grid place-items-center sticky top-0">
-          <h2 className="text-7xl font-bold text-center">RAM HERE</h2>
+        <div className="min-h-screen flex justify-center items-center sticky top-0">
+          <div className='w-[33.33%] relative'>
+            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
+              <div className='px-4'>
+                <h2 className="text-4xl">RAM</h2>
+                <p className='text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
+              </div>
+            </div>
+            <img src={memory} className='w-full h-[500px] object-cover aspect-square' />
+          </div>
         </div>
-        <div className="min-h-screen flex-1 grid place-items-center sticky top-0">
-          <h2 className="text-7xl font-bold text-center">RESISTANCE HERE</h2>
+        <div className="min-h-screen flex justify-end items-center sticky top-0">
+          <div className='w-[33.33%] relative'>
+            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
+              <div className='px-4'>
+                <h2 className="text-4xl">Resistance</h2>
+                <p className='text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
+              </div>
+            </div>
+            <img src={resistance} className='w-full h-[500px] object-cover aspect-square' />
+          </div>
         </div>
+        <div className="min-h-screen"></div>
       </div>
       <div className="min-h-screen"></div>
       <div className="px-4">
@@ -207,7 +232,5 @@ function App() {
     </div>
   )
 }
-
-// update section
 
 export default App
