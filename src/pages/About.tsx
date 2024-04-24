@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { cable, cameraScreen, phone14, phoneHand, subway, youtube } from "../assets"
 
 function About() {
   const slides = useRef<HTMLDivElement>(null)
+  const phoneCharge = useRef<HTMLDivElement>(null)
+  const [scroll, setScroll] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,7 +13,9 @@ function About() {
       const clientHeight = window.innerHeight
       const scrollableDistance = scrollHeight - clientHeight
       const scrollPercentage = (scrollTop / scrollableDistance) * 100
-      console.log(scrollPercentage)
+
+      const batteryPercentage = ((scrollTop - 8490) / (phoneCharge.current!.scrollHeight - clientHeight)) * 100
+      setScroll(Math.floor(Math.min(Math.max(batteryPercentage, 0), 100)))
       
       if(scrollPercentage <= 25) {
         slides.current!.className = "simulate-slides translate-x-0"
@@ -68,18 +72,23 @@ function About() {
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
       </div>
-      <div className="min-h-screen grid place-items-center">
+      <div ref={phoneCharge} className="min-h-screen grid place-items-center">
         <div className="sticky top-[10vh]">
-          <img src={phoneHand}/>
-          <div className="absolute inset-0 grid place-items-center z-[10]">
-            <div className="text-center">
-              <h3 className="text-5xl font-extrabold ml-[79px]">TEST</h3>
+          <div className="relative">
+            <img src={phoneHand}/>
+            <div className="absolute inset-0 grid place-items-center z-[10]">
+              <div className="text-center">
+                <h3 className="text-7xl ml-[79px] font-extrabold">{scroll}%</h3>
+              </div>
+            </div>
+            <div className="absolute bottom-[-76px] left-[52%]">
+              <div className="sticky top-[90vh]">
+                <img src={cable} className=" max-w-[50px]"/>
+              </div>
             </div>
           </div>
         </div>
-        <div className="min-h-screen sticky top-[90vh]">
-          <img src={cable}  className="absolute bottom-[-76px] left-[52%] max-w-[50px]"/>
-        </div>
+        <div className="min-h-screen"></div>
         <div className="min-h-screen"></div>
         <div className="min-h-screen"></div>
       </div>
@@ -89,9 +98,5 @@ function About() {
     </>
   )
 }
-
-// add one more image
-// add overlay text on the section
-// add two more section
 
 export default About

@@ -6,7 +6,6 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = (e: any) => {
       const { scrollTop } = e.target.scrollingElement
-      console.log(scrollTop)
       if(scrollTop >= 200) {
         navRef.current!.classList.remove("bg-transparent", "text-black")
         navRef.current!.classList.add("bg-black/90", "text-white")
