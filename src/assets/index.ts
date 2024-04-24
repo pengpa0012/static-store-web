@@ -68,6 +68,7 @@ import memory from "./memory.jpg"
 import resistance from "./resistance.jpg"
 import phoneHand from "./phone-hand.jpg"
 import cable from "./cable.png"
+import battery from "./battery.png"
 
 export {
   six,
@@ -139,5 +140,6 @@ export {
   memory,
   resistance,
   phoneHand,
-  cable
+  cable,
+  battery
 }

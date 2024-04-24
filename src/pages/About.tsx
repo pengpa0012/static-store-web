@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { cable, cameraScreen, phone14, phoneHand, subway, youtube } from "../assets"
+import { battery, cable, cameraScreen, phone14, phoneHand, subway, youtube } from "../assets"
 
 function About() {
   const slides = useRef<HTMLDivElement>(null)
@@ -78,7 +78,11 @@ function About() {
             <img src={phoneHand}/>
             <div className="absolute inset-0 grid place-items-center z-[10]">
               <div className="text-center">
-                <h3 className="text-7xl ml-[79px] font-extrabold">{scroll}%</h3>
+                <h3 className="text-6xl ml-[79px] font-extrabold relative z-[2]">{scroll}%</h3>
+                <div className="absolute top-[42%] left-[37%]">
+                  <img src={battery} className="w-[234px] h-[137px] relative z-[2]" />
+                  <div className="bg-green-500 h-[137px] -translate-y-full" style={{width: `${scroll}%`}}></div>
+                </div>
               </div>
             </div>
             <div className="absolute bottom-[-76px] left-[52%]">
