@@ -66,6 +66,8 @@ import imgSliderGray from "./img-slider-gray.jpg"
 import cpu2 from "./cpu-2.jpg"
 import memory from "./memory.jpg"
 import resistance from "./resistance.jpg"
+import phoneHand from "./phone-hand.jpg"
+import cable from "./cable.png"
 
 export {
   six,
@@ -135,5 +137,7 @@ export {
   imgSliderGray,
   cpu2,
   memory,
-  resistance
+  resistance,
+  phoneHand,
+  cable
 }

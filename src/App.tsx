@@ -49,38 +49,39 @@ function App() {
       <div className="min-h-screen grid place-items-center">
         <img ref={productRef} className="w-[300px] transition-all duration-100" src={test2}/>
       </div>
+      <div className="min-h-screen"></div>
       <div className='min-h-[300vh] relative'>
         <div className="min-h-screen flex justify-start items-center sticky top-0">
           <div className='w-[33.33%] relative'>
             <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
               <div className='px-4'>
-                <h2 className="text-4xl">CPU</h2>
-                <p className='text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
+                <h2 className="text-6xl mb-4 font-bold">CPU</h2>
+                <p className='text-2xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
               </div>
             </div>
-            <img src={cpu2} className='w-full h-[500px] object-cover aspect-square' />
+            <img src={cpu2} className='w-full min-h-screen object-cover aspect-square' />
           </div>
         </div>
         <div className="min-h-screen flex justify-center items-center sticky top-0">
           <div className='w-[33.33%] relative'>
             <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
               <div className='px-4'>
-                <h2 className="text-4xl">RAM</h2>
-                <p className='text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
+                <h2 className="text-6xl mb-4 font-bold">RAM</h2>
+                <p className='text-2xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
               </div>
             </div>
-            <img src={memory} className='w-full h-[500px] object-cover aspect-square' />
+            <img src={memory} className='w-full min-h-screen object-cover aspect-square' />
           </div>
         </div>
         <div className="min-h-screen flex justify-end items-center sticky top-0">
           <div className='w-[33.33%] relative'>
             <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
               <div className='px-4'>
-                <h2 className="text-4xl">Resistance</h2>
-                <p className='text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
+                <h2 className="text-6xl mb-4 font-bold">Resistance</h2>
+                <p className='text-2xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
               </div>
             </div>
-            <img src={resistance} className='w-full h-[500px] object-cover aspect-square' />
+            <img src={resistance} className='w-full min-h-screen object-cover aspect-square' />
           </div>
         </div>
         <div className="min-h-screen"></div>
