@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react"
-import { battery, cable, cameraScreen, phone14, phoneHand, subway, youtube } from "../assets"
+import { aboutBanner, battery, cable, cameraScreen, phone14, phoneHand, subway, youtube } from "../assets"
 
 function About() {
   const slides = useRef<HTMLDivElement>(null)
   const phoneCharge = useRef<HTMLDivElement>(null)
+  const aboutBannerRef = useRef<HTMLImageElement>(null)
   const [scroll, setScroll] = useState(0)
 
   useEffect(() => {
@@ -13,15 +14,20 @@ function About() {
       const clientHeight = window.innerHeight
       const scrollableDistance = scrollHeight - clientHeight
       const scrollPercentage = (scrollTop / scrollableDistance) * 100
+      const position = Math.ceil(
+        (scrollTop / (scrollHeight - clientHeight)) * 100
+    )
 
-      const batteryPercentage = ((scrollTop - 8490) / (phoneCharge.current!.scrollHeight - clientHeight)) * 100
+      const batteryPercentage = ((scrollTop - 8700) / (phoneCharge.current!.scrollHeight - clientHeight)) * 100
+      aboutBannerRef.current!.style.transform = `translateY(${-(position)}%)`
+      console.log(scrollPercentage)
       setScroll(Math.floor(Math.min(Math.max(batteryPercentage, 0), 100)))
       
       if(scrollPercentage <= 25) {
         slides.current!.className = "simulate-slides translate-x-0"
-      } else if(scrollPercentage >= 25 && scrollPercentage <= 55) {
+      } else if(scrollPercentage >= 25 && scrollPercentage <= 42) {
         slides.current!.className = "simulate-slides -translate-x-[33%]"
-      } else if(scrollPercentage >= 55) {
+      } else if(scrollPercentage >= 42) {
         slides.current!.className = "simulate-slides -translate-x-[66%]"
       }
     }
@@ -33,11 +39,17 @@ function About() {
  
   return (
     <>
-      <div className="max-w-[1440px] mx-auto min-h-screen flex justify-start items-center px-4">
-        <div className="w-1/2">
-          <h1 className="text-7xl font-bold">This is a About</h1>
-          <p className="text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio culpa, aliquam voluptate ducimus corrupti tenetur unde doloribus earum harum eos.</p>
+      <div className="min-h-screen relative">
+        <div className="max-w-[1440px] mx-auto min-h-screen flex justify-start items-center px-4">
+          <div className="w-1/2">
+            <h1 className="text-7xl font-bold">This is a About</h1>
+            <p className="text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio culpa, aliquam voluptate ducimus corrupti tenetur unde doloribus earum harum eos.</p>
+          </div>
         </div>
+        <img ref={aboutBannerRef} src={aboutBanner} className="duration-500 absolute top-[10%] right-0 max-w-[1000px] z-[-1]" />
+      </div>
+      <div className="min-h-screen bg-white grid place-items-center">
+        <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
       </div>
       <div className="min-h-screen py-12 px-4">
         <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>

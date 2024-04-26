@@ -69,6 +69,7 @@ import resistance from "./resistance.jpg"
 import phoneHand from "./phone-hand.jpg"
 import cable from "./cable.png"
 import battery from "./battery.png"
+import aboutBanner from "./about-banner.png"
 
 export {
   six,
@@ -141,5 +142,6 @@ export {
   resistance,
   phoneHand,
   cable,
-  battery
+  battery,
+  aboutBanner
 }
