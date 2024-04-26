@@ -33,8 +33,11 @@ function About() {
  
   return (
     <>
-      <div className="min-h-screen grid place-items-center">
-        <h1 className="text-7xl font-bold">This is a About</h1>
+      <div className="max-w-[1440px] mx-auto min-h-screen flex justify-start items-center px-4">
+        <div className="w-1/2">
+          <h1 className="text-7xl font-bold">This is a About</h1>
+          <p className="text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio culpa, aliquam voluptate ducimus corrupti tenetur unde doloribus earum harum eos.</p>
+        </div>
       </div>
       <div className="min-h-screen py-12 px-4">
         <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
@@ -70,7 +73,7 @@ function About() {
         <div className="min-h-screen"></div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center py-24">Fast Charging Technology</h2>
       </div>
       <div ref={phoneCharge} className="min-h-screen grid place-items-center">
         <div className="sticky top-[10vh]">
