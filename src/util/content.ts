@@ -24,7 +24,8 @@ export const productContent = [
     back: phone1Back,
     name: "Product 1",
     description: "Description 1",
-    price: 1000
+    price: 1000,
+    specs: ["CPU: Snapdragon","RAM: 6GB", "Storage: 128GB", "Camera: 48MP", "Video: 4k 60fps", "Size: 6.25"]
   },
   {
     id: 1,
@@ -32,7 +33,8 @@ export const productContent = [
     back: phone2Back,
     name: "Product 2",
     description: "Description 2",
-    price: 1001
+    price: 1001,
+    specs: ["CPU: Snapdragon","RAM: 6GB", "Storage: 128GB", "Camera: 48MP", "Video: 4k 60fps", "Size: 6.25"]
   },
   {
     id: 2,
@@ -40,7 +42,8 @@ export const productContent = [
     back: phone3Back,
     name: "Product 3",
     description: "Description 3",
-    price: 1002
+    price: 1002,
+    specs: ["CPU: Snapdragon","RAM: 6GB", "Storage: 128GB", "Camera: 48MP", "Video: 4k 60fps", "Size: 6.25"]
   },
   {
     id: 3,
@@ -48,7 +51,8 @@ export const productContent = [
     back: phone4Back,
     name: "Product 4",
     description: "Description 4",
-    price: 1000
+    price: 1000,
+    specs: ["CPU: Snapdragon","RAM: 6GB", "Storage: 128GB", "Camera: 48MP", "Video: 4k 60fps", "Size: 6.25"]
   }
 ]
 
