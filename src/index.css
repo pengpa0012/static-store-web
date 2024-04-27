@@ -136,6 +136,10 @@ body {
   transform: translateX(50%);
 }
 
+.memory-img {
+  transition: 500ms;
+}
+
 @keyframes sliderAnim {
   from {
     transform: translate(0, -92%);

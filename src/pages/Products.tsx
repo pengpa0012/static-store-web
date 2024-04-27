@@ -1,4 +1,3 @@
-import Product from "../components/Product"
 import { productContent } from "../util/content"
 import { ProductData } from "../util/types"
 

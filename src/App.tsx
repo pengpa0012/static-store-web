@@ -1,7 +1,5 @@
-import { useEffect, useRef } from 'react'
+import {useEffect, useRef } from 'react'
 import { close1, close6, close7, cpu2, flat, imgSlider, imgSliderGray, memory, phone1, phone15, phone17, phone18, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, resistance, slide1, slide2, slide3, slide4, slide5, test2, vid1, vid2, vid3, vid4, vid5 } from "./assets/index"
-import './App.css'
-import React from 'react'
 import { featContent, phoneFeatures } from './util/content'
 
 function App() {
@@ -9,6 +7,7 @@ function App() {
   const heroImgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
+    const memoryImg = document.querySelectorAll(".memory-img")
     const handleScroll = (e: any) => {
       const { scrollTop, scrollHeight, clientHeight } = e.target.scrollingElement
       const position = Math.ceil(
@@ -16,6 +15,13 @@ function App() {
       )
       if(position < 30) {
         productRef.current!.style.transform = `translateY(${-(position * 30)}px) scale(${position * 0.4})`
+      }
+      if(position >= 60) {
+        memoryImg.forEach(el => {
+          // @ts-ignore
+          el.style.transform = `translateY(${-((position - 60) * el.attributes["data-y"]!.value)}px)`
+
+        })
       }
       heroImgRef.current!.style.transform = `translateY(${-(position - 50)}%)`
     }
@@ -53,7 +59,7 @@ function App() {
       <div className='min-h-[300vh] relative'>
         <div className="min-h-screen flex justify-start items-center sticky top-0">
           <div className='w-[33.33%] relative'>
-            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
+            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/70'>
               <div className='px-4'>
                 <h2 className="text-6xl mb-4 font-bold">CPU</h2>
                 <p className='text-2xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
@@ -64,7 +70,7 @@ function App() {
         </div>
         <div className="min-h-screen flex justify-center items-center sticky top-0">
           <div className='w-[33.33%] relative'>
-            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
+            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/70'>
               <div className='px-4'>
                 <h2 className="text-6xl mb-4 font-bold">RAM</h2>
                 <p className='text-2xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
@@ -75,7 +81,7 @@ function App() {
         </div>
         <div className="min-h-screen flex justify-end items-center sticky top-0">
           <div className='w-[33.33%] relative'>
-            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/50'>
+            <div className='text-center text-white absolute inset-0 grid place-items-center bg-black/70'>
               <div className='px-4'>
                 <h2 className="text-6xl mb-4 font-bold">Resistance</h2>
                 <p className='text-2xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, unde?</p>
@@ -102,7 +108,7 @@ function App() {
                 {
                   i == 0 &&
                   <div className='mx-auto my-12'>
-                    <p className="text-sm mb-2">Available colors:</p>
+                    <p className="text-sm mb-2">Variants:</p>
                     <div className="flex gap-4">
                       <div className="w-[40px] h-[40px] bg-red-500 rounded-full"></div>
                       <div className="w-[40px] h-[40px] bg-gray-500 rounded-full"></div>
@@ -136,18 +142,45 @@ function App() {
           </div>
           <div className="min-h-screen"></div>
           <div className="relative z-[-2]">
-            <p className="text-6xl text-center font-bold leading-snug py-24">Make memories...</p>
-            {
-              [vid1,vid2,vid3,vid4,vid5].map((el, i) => (
+            <p className="text-6xl text-center font-bold leading-snug py-[200px]">Make memories...</p>
+            {/* put a bunch of little images */}
+            <div className="flex justify-end items-baseline py-4">
+              <img src={slide1} data-y="41" className="memory-img max-w-[500px]" />
+            </div>
+            <div className="flex justify-between items-baseline py-4">
+              <img src={slide2} data-y="26" className="memory-img max-w-[400px]" />
+              <img src={slide3} data-y="43" className="memory-img max-w-[300px] translate-y-[50%]" />
+            </div>
+            <div className="flex justify-end items-baseline py-4">
+              <img src={slide4} data-y="31" className="memory-img max-w-[320px] translate-y-[50%]" />
+            </div>
+            <div className="flex justify-start items-baseline py-4">
+              <img src={slide5} data-y="35" className="memory-img max-w-[400px]" />
+            </div>
+            <div className="flex justify-end gap-4 items-baseline py-4">
+              <img src={slide1} data-y="35" className="memory-img max-w-[500px]" />
+            </div>
+            <div className="flex justify-between gap-4 items-baseline py-4">
+              <img src={slide2} data-y="30" className="memory-img max-w-[500px] translate-y-[10%]" />
+            </div>
+            <div className="flex justify-between gap-4 items-baseline py-4">
+              <img src={slide3} data-y="24" className="memory-img max-w-[300px] translate-y-[40%]" />
+              <img src={slide4} data-y="33" className="memory-img max-w-[350px] translate-y-[10%]" />
+            </div>
+            <div className="flex justify-center gap-4 items-baseline py-24">
+              <img src={slide1} data-y="12" className="memory-img max-w-[600px]" />
+            </div>
+            {/* {
+              [slide1,slide1,slide1,slide1,slide1].map((el, i) => (
                 <div className="w-full max-w-[1000px] h-[419px] aspect-square" key={i}>
                   <video autoPlay muted loop className='w-full h-full' src={el}></video>
                 </div>
               ))
-            }
+            } */}
           </div>
         </div>
       </div>
-      <div className="min-h-screen grid place-items-center">
+      {/* <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center">Capture the moments...</h2>
       </div>
       <div className='min-h-screen flex flex-col items-center justify-center'>
@@ -163,7 +196,7 @@ function App() {
             ))
           }
         </div>    
-      </div>
+      </div> */}
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
@@ -215,20 +248,25 @@ function App() {
           <img src={phone17} className='flex-1 h-[450px] object-cover'/>
         </div>
       </div>
-      <div className='min-h-screen max-w-[1440px] mx-auto px-4 py-56'>
+      <div className='min-h-screen px-4 py-56 bg-[#070707] text-white'>
+        <div className='max-w-[1440px] mx-auto'>
         <h4 className="text-5xl font-bold mb-4">Heading.<br /> Lorem ipsum dolor sit.</h4>
-        <div className="flex flex-col justify-center gap-1">
-          <img src={close1} className='w-full max-h-[600px] aspect-square object-cover'/>
-          <div className="flex gap-1">
-            <img src={close6} className='w-1/2 max-h-[500px] flex-1/2 aspect-square object-cover'/>
-            <img src={close7} className='w-1/2 max-h-[500px] flex-1/2 aspect-square object-cover'/>
-          </div>
-          <div className="flex gap-1">
-            <img src={phone1} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
-            <img src={phone2} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
-            <img src={phone3} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+          <div className="flex flex-col justify-center gap-1">
+            <img src={close1} className='w-full max-h-[600px] aspect-square object-cover'/>
+            <div className="flex gap-1">
+              <img src={close6} className='w-1/2 max-h-[500px] flex-1/2 aspect-square object-cover'/>
+              <img src={close7} className='w-1/2 max-h-[500px] flex-1/2 aspect-square object-cover'/>
+            </div>
+            <div className="flex gap-1">
+              <img src={phone1} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+              <img src={phone2} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+              <img src={phone3} className='w-4/12 max-h-[400px] aspect-square object-cover'/>
+            </div>
           </div>
         </div>
+      </div>
+      <div className="min-h-screen grid place-items-center">
+        <h2 className="text-7xl font-bold text-center">Something text here...</h2>
       </div>
     </div>
   )

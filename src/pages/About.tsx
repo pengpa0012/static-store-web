@@ -85,7 +85,10 @@ function About() {
         <div className="min-h-screen"></div>
       </div>
       <div className="min-h-screen grid place-items-center">
-        <h2 className="text-7xl font-bold text-center py-24">Fast Charging Technology</h2>
+        <div className="text-center py-24">
+          <h2 className="text-7xl font-bold mb-4">Fast Charging Technology</h2>
+          <p className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, illum?</p>
+        </div>
       </div>
       <div ref={phoneCharge} className="min-h-screen grid place-items-center">
         <div className="sticky top-[10vh]">
