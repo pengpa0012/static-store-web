@@ -31,25 +31,29 @@ function Products() {
         productContent.map(el => (
           <div className="min-h-screen" key={el.id}>
             <div className="max-w-[1440px] mx-auto px-4 flex relative">
-              <img src={el.front} className="flex-1 max-w-[300px] z-[2]" />
-              <img src={el.back} className="hover-phone flex-1 max-w-[300px] absolute top-0 left-[12%]" />
+              <div className="flex-1">
+                <img src={el.front} className="flex-1 max-w-[300px] relative z-[2]" />
+                <img src={el.back} className="hover-phone flex-1 max-w-[300px] absolute top-0 left-[12%]" />
+              </div>
               <div className="flex-1 flex justify-center">
                 <div>
-                  <h4 className="text-5xl font-bold">{el.name}</h4>
-                  <p className="text-xl">{el.description}</p>
+                  <h4 className="text-5xl font-bold mb-2">{el.name}</h4>
+                  <p className="text-sm">{el.description}</p>
                   <ul className="my-4">
                     {
-                      el.specs.map(el => (
-                        <li>{el}</li>
+                      el.specs.map((el, i) => (
+                        <li key={i}>{el}</li>
                       ))
                     }
                   </ul>
                   <div className="pb-4">
                     <p className="mb-2 text-sm">Variant</p>
                     <div className="flex gap-4">
-                      <div className="w-[20px] h-[20px] bg-red-500 rounded-full"></div>
-                      <div className="w-[20px] h-[20px] bg-gray-500 rounded-full"></div>
-                      <div className="w-[20px] h-[20px] bg-blue-500 rounded-full"></div>
+                      {
+                        el.variant.map((el, i) => (
+                          <div key={i} className={`w-[20px] h-[20px] rounded-full`} style={{background: el}}></div>
+                        ))
+                      }
                     </div>
                   </div>
                   <p className="text-2xl font-bold">Price: ₱{el.price}</p>

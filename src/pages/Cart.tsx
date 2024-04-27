@@ -44,7 +44,7 @@ function Cart() {
                     <img src={el.front} className="w-[100px] h-[100px] object-contain" />
                     <div className="flex flex-col gap-2">
                       <p>{el.name}</p>
-                      <h3 className="text-2xl">{el.description}</h3>
+                      {/* <h3 className="text-2xl">{el.description}</h3> */}
                     </div>
                   </td>
                   <td className="text-lg">${el.price}</td>
