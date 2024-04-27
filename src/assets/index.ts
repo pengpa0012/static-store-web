@@ -16,11 +16,6 @@ import close2 from "./close2.jpg"
 import close3 from "./close3.jpg"
 import close4 from "./close4.jpg"
 import close5 from "./close5.jpg"
-import vid1 from "./vid-1.mp4"
-import vid2 from "./vid-2.mp4"
-import vid3 from "./vid-3.mp4"
-import vid4 from "./vid-4.mp4"
-import vid5 from "./vid-5.mp4"
 import close6 from "./close6.jpg"
 import close7 from "./close7.jpg"
 import close8 from "./close8.jpg"
@@ -90,11 +85,6 @@ export {
   close3,
   close4,
   close5,
-  vid1,
-  vid2,
-  vid3,
-  vid4,
-  vid5,
   close6,
   close7,
   close8,

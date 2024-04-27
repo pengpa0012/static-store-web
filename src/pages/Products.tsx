@@ -55,7 +55,7 @@ function Products() {
                       }
                     </div>
                   </div>
-                  <p className="text-2xl font-bold">Price: ₱{el.price}</p>
+                  <p className="text-2xl font-bold">Price: ${el.price}</p>
                   <div className="flex gap-4 mt-4">
                     <button className='bg-blue-600 text-xs text-white rounded-full py-2 px-4'>Buy Now</button>
                     <button className='text-gray-600 text-xs' onClick={() => onAddToCart(el)}>Add to Cart</button>
