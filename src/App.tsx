@@ -1,5 +1,5 @@
 import {useEffect, useRef } from 'react'
-import { close1, close6, close7, cpu2, flat, imgSlider, imgSliderGray, memory, phone1, phone15, phone17, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, resistance, slide1, slide2, slide3, slide4, slide5, test2 } from "./assets/index"
+import { close1, close6, close7, cpu2, flat, imgSlider, imgSliderGray, memory, phone1, phone15, phone17, phone2, phone3, phone3Back, phone3Front, phone4Back, phone4Front, resistance, slide1, slide10, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, test2 } from "./assets/index"
 import { featContent, phoneFeatures } from './util/content'
 
 function App() {
@@ -158,17 +158,17 @@ function App() {
               <img src={slide5} data-y="35" className="memory-img max-w-[400px]" />
             </div>
             <div className="flex justify-end gap-4 items-baseline py-4">
-              <img src={slide1} data-y="35" className="memory-img max-w-[500px]" />
+              <img src={slide6} data-y="35" className="memory-img max-w-[500px]" />
             </div>
             <div className="flex justify-between gap-4 items-baseline py-4">
-              <img src={slide2} data-y="30" className="memory-img max-w-[500px] translate-y-[10%]" />
+              <img src={slide7} data-y="30" className="memory-img max-w-[500px] translate-y-[10%]" />
             </div>
             <div className="flex justify-between gap-4 items-baseline py-4">
-              <img src={slide3} data-y="24" className="memory-img max-w-[300px] translate-y-[40%]" />
-              <img src={slide4} data-y="33" className="memory-img max-w-[350px] translate-y-[10%]" />
+              <img src={slide8} data-y="24" className="memory-img max-w-[300px] translate-y-[40%]" />
+              <img src={slide9} data-y="33" className="memory-img max-w-[350px] translate-y-[10%]" />
             </div>
             <div className="flex justify-center gap-4 items-baseline py-24">
-              <img src={slide1} data-y="12" className="memory-img max-w-[600px]" />
+              <img src={slide10} data-y="12" className="memory-img max-w-[600px]" />
             </div>
             {/* {
               [slide1,slide1,slide1,slide1,slide1].map((el, i) => (
@@ -244,14 +244,16 @@ function App() {
                 ))
               }
             </div>
-            <h4 className="text-3xl font-bold mt-12">SRP: $999</h4>
+            <h4 className="text-3xl font-bold mt-12">Price: $999</h4>
           </div>
           <img src={phone17} className='flex-1 h-[450px] object-cover'/>
         </div>
       </div>
-      <div className='min-h-screen px-4 py-56 bg-[#070707] text-white'>
-        <div className='max-w-[1440px] mx-auto'>
-        <h4 className="text-5xl font-bold mb-4">Heading.<br /> Lorem ipsum dolor sit.</h4>
+      <div className="min-h-screen"></div>
+      <div className='min-h-screen bg-[#070707] text-white relative'>
+        <div className="top-gradient"></div>
+        <div className='max-w-[1440px] px-4 py-56 mx-auto'>
+        <h4 className="text-7xl font-bold mb-6">Heading.<br /> Lorem ipsum dolor sit.</h4>
           <div className="flex flex-col justify-center gap-1">
             <img src={close1} className='w-full max-h-[600px] aspect-square object-cover'/>
             <div className="flex gap-1">
@@ -265,6 +267,7 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="bottom-gradient"></div>
       </div>
       <div className="min-h-screen grid place-items-center">
         <h2 className="text-7xl font-bold text-center">Something text here...</h2>

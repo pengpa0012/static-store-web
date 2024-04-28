@@ -20,7 +20,6 @@ function About() {
 
       const batteryPercentage = ((scrollTop - 8700) / (phoneCharge.current!.scrollHeight - clientHeight)) * 100
       aboutBannerRef.current!.style.transform = `translateY(${-(position)}%)`
-      console.log(scrollPercentage)
       setScroll(Math.floor(Math.min(Math.max(batteryPercentage, 0), 100)))
       
       if(scrollPercentage <= 25) {
@@ -115,7 +114,7 @@ function About() {
         <div className="min-h-screen"></div>
       </div>
       <div className="min-h-screen bg-white relative z-[2] grid place-items-center">
-        <h2 className="text-7xl font-bold text-center py-24">Something text here...</h2>
+        <h2 className="text-7xl font-bold text-center py-24">Contact Us or something...</h2>
       </div>
     </>
   )

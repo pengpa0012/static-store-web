@@ -2,14 +2,14 @@ import { icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, phone1Ba
 
 export const featContent = [
   [ 
-    {icon: icon1, text:"Battery", description: "5000mAh Lithium-ion \nbattery"},
+    {icon: icon1, text:"Battery", description: "4500mAh Lithium-ion \nbattery"},
     {icon: icon2, text:"Camera", description: "Rear camera: 64MP/12MP/8MP \nFront camera: 32MP"},
     {icon: icon3, text:"Charger", description: "65W SuperCharge adapter"}
   ],
   [
     {icon: icon4, text:"CPU", description: "Qualcomm Snapdragon 888 \nOcta-core processor"},
     {icon: icon5, text:"RAM", description: "8GB"},
-    {icon: icon6, text:"ROM", description: "128GB"}
+    {icon: icon6, text:"Storage", description: "128GB"}
   ],
   [ {icon: icon7, text:"Video", description: "4K at 60fps"},
     {icon: icon8, text:"Size", description: "6.5-inch AMOLED display \nFull HD+ resolution"},
